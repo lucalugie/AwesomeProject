@@ -1,0 +1,242 @@
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ */
+
+// import React from 'react';
+// import type {PropsWithChildren} from 'react';
+// import {
+//   SafeAreaView,
+//   ScrollView,
+//   StatusBar,
+//   StyleSheet,
+//   Text,
+//   useColorScheme,
+//   View,
+// } from 'react-native';
+
+// import {
+//   Colors,
+//   DebugInstructions,
+//   Header,
+//   LearnMoreLinks,
+//   ReloadInstructions,
+// } from 'react-native/Libraries/NewAppScreen';
+
+// type SectionProps = PropsWithChildren<{
+//   title: string;
+// }>;
+
+// function Section({children, title}: SectionProps): JSX.Element {
+//   const isDarkMode = useColorScheme() === 'dark';
+//   return (
+//     <View style={styles.sectionContainer}>
+//       <Text
+//         style={[
+//           styles.sectionTitle,
+//           {
+//             color: isDarkMode ? Colors.white : Colors.black,
+//           },
+//         ]}>
+//         {title}
+//       </Text>
+//       <Text
+//         style={[
+//           styles.sectionDescription,
+//           {
+//             color: isDarkMode ? Colors.light : Colors.dark,
+//           },
+//         ]}>
+//         {children}
+//       </Text>
+//     </View>
+//   );
+// }
+
+// function App(): JSX.Element {
+//   const isDarkMode = useColorScheme() === 'dark';
+
+//   const backgroundStyle = {
+//     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+//   };
+
+//   return (
+//     <SafeAreaView style={backgroundStyle}>
+//       <StatusBar
+//         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+//         backgroundColor={backgroundStyle.backgroundColor}
+//       />
+//       <ScrollView
+//         contentInsetAdjustmentBehavior="automatic"
+//         style={backgroundStyle}>
+//         <Header />
+//         <View
+//           style={{
+//             backgroundColor: isDarkMode ? Colors.black : Colors.white,
+//           }}>
+//          <Section title="Step One">
+//             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
+//             screen and then come back to see your edits.
+//           </Section>
+//           <Section title="See Your Changes">
+//             <ReloadInstructions />
+//           </Section>
+//           <Section title="Debug">
+//             <DebugInstructions />
+//           </Section>
+//           <Section title="Learn More">
+//             Read the docs to discover what to do next:
+//           </Section>
+//           <LearnMoreLinks />
+//         </View>
+//       </ScrollView>
+//     </SafeAreaView>
+//   );
+// }
+
+// const styles = StyleSheet.create({
+//   sectionContainer: {
+//     marginTop: 32,
+//     paddingHorizontal: 24,
+//   },
+//   sectionTitle: {
+//     fontSize: 24,
+//     fontWeight: '600',
+//   },
+//   sectionDescription: {
+//     marginTop: 8,
+//     fontSize: 18,
+//     fontWeight: '400',
+//   },
+//   highlight: {
+//     fontWeight: '700',
+//   },
+// });
+
+//export default App;
+
+//Luca test :-)1♥
+import React from 'react';
+import { Button } from 'react-native'
+import { TouchableOpacity, StyleSheet, View, Text, Animated, } from 'react-native'
+import Home from './lugie_test/Home';
+import List from './lugie_test/List.js';
+import Inputs from './lugie_test/Inputs.js'
+import ScrollViewExample from './lugie_test/scroll_view.js';
+import ImagesExample from './lugie_test/ImagesExample.js'
+import HttpExample from './lugie_test/http_example.js'
+import WebViewExample from './lugie_test/web_view_example.js'
+import ModalExample from './lugie_test/ModalExample'
+import ActivityIndicatorExample from './lugie_test/activity_indicator_example.js'
+import PickerExample from './lugie_test/PickerExample.js'
+import { StatusBar } from 'react-native'
+import HomeContainer from './lugie_test/HomeContainer'
+import TextExample from './lugie_test/text_example.js'
+import AlertExample from './lugie_test/alert_example.js'
+// import GeolocationExample from './geolocation_example.js'
+import AsyncStorageExample from './lugie_test/async_storage_example.js'
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import HomeScreen from './lugie_test/screens/HomeScreen';
+import DetailsScreen from './lugie_test/screens/DetailsScreen';
+
+
+const Stack = createNativeStackNavigator();
+
+function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Details" component={DetailsScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+// class App extends React.Component {
+//   // state = {
+//   //   myState: `Hi my name is Luca. Luca so cutee ♥♥♥`
+//   // }
+
+//   render() {
+//     const handlePress = () => false
+//     return (
+//       <NavigationContainer>
+//          <Stack.Navigator>
+//         <Stack.Screen name="Home" component={HomeScreen} />
+//         <Stack.Screen name="User" component={UserScreen} />
+
+//       </Stack.Navigator>
+//       </NavigationContainer>
+//       );
+//       {/* // <View>
+//       //   <Home />
+    
+//       // </View>  
+//       // <List />
+//       // <Inputs />
+//       // <ScrollViewExample />
+//       // <ImagesExample />
+//       // <HttpExample /> */}
+      
+
+//       {/* // <Button
+//       //    onPress = {handlePress}
+//       //    title = "Red button!"
+//       //    color = "red"
+//       // />
+
+//       // <View style = {styles.container}>
+//       //    <TouchableOpacity>
+//       //       <Text style = {styles.text}>
+//       //          Button
+//       //       </Text>
+//       //    </TouchableOpacity>
+//       // </View>
+//       // <WebViewExample/>
+//       // <ModalExample />
+//       // <ActivityIndicatorExample />
+//       // <PickerExample />
+//       // <StatusBar barStyle = "dark-content" hidden = {false} backgroundColor = "red" translucent = {true}/>
+//       // <HomeContainer />
+//       // <TextExample/>
+//       <AlertExample />
+//       // <GeolocationExample />
+//       // <AsyncStorageExample /> */}
+      
+    
+//   }
+// }
+
+export default App;
+
+const styles = StyleSheet.create ({
+  container: {
+     alignItems: 'center',
+  },
+  text: {
+     borderWidth: 1,
+     padding: 25,
+     borderColor: '#fff' ,
+     color: '#fff',
+     backgroundColor: 'red'
+  }
+})
+
+//Luca test :-)2♥
+// import React, { Component } from 'react';
+// import { AppRegistry, View } from 'react-native';
+// import Routes from './Routes.js'
+
+// class App extends Component {
+//    render() {
+//       return (
+//          <Routes />
+//       )
+//    }
+// }
+// export default App
+
